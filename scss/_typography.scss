@@ -1,0 +1,110 @@
+// styles/base/_typography.scss
+@import "variables";
+
+// Font families
+$font-family-primary: "Inter", sans-serif;
+$font-family-secondary: "Raleway", sans-serif;
+$font-family-monospace: "Roboto Mono", monospace;
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 600;
+
+// Font sizes
+$font-size-root: 16px;
+$font-size-base: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.125rem;
+
+// Line heights
+$line-height-base: 1.5;
+$line-height-heading: 1.2;
+
+// Headings
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+// Set base font settings
+html {
+  font-size: $font-size-root;
+  color: $color-light-text;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  color: $color-light-text;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-heading;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+h2 {
+  font-size: $h2-font-size;
+}
+h3 {
+  font-size: $h3-font-size;
+}
+h4 {
+  font-size: $h4-font-size;
+}
+h5 {
+  font-size: $h5-font-size;
+}
+h6 {
+  font-size: $h6-font-size;
+}
+
+// Paragraph
+p {
+  margin-top: 0;
+  // margin-bottom: 1em;
+}
+
+// Link styles
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Small text
+small {
+  font-size: $font-size-sm;
+}
+
+// Bold text
+strong {
+  font-weight: $font-weight-bold;
+}
+
+// Monospace font
+pre,
+code {
+  font-family: $font-family-monospace;
+}

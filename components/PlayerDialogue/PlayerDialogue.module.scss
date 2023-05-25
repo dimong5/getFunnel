@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-bottom: 4rem;
+  @media screen and (max-width: 376px) {
+    height: 100vh;
+  }
+}
+
+.copyright {
+  color: var(--on-surface-color);
+  opacity: 0.7;
+  position: absolute;
+  bottom: 1.5rem; // set the distance from the bottom here
+  width: 100%; // make the element full width of its container
+  text-align: center; // center the text horizontally
+  font-size: 0.75rem; // adjust the font size as needed
+  @media screen and (max-width: 376px) {
+    bottom: 0.25rem;
+  }
+}

@@ -1,0 +1,50 @@
+.progressIndicator {
+  width: 100%;
+  bottom: 0;
+  @media screen and (max-width: 768px) {
+    bottom: 4rem;
+  }
+  display: flex;
+  box-sizing: border-box;
+  background: #d7d5d5;
+  height: 5px;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.progressIndicatorFull {
+  background: var(--primary-color);
+  height: 5px;
+  position: absolute;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.progressIndicatorPreloaded {
+  background: var(--primary-color);
+  height: 5px;
+  opacity: 0.25;
+  position: absolute;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.progress {
+  width: 100%;
+  height: 6px;
+  padding: 0 27px;
+  position: absolute;
+  bottom: 34px;
+}
+
+.progressCircle {
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 50%;
+  background: var(--primary-color);
+  position: absolute;
+  bottom: -0.28rem;
+  opacity: 0.8;
+  left: 0;
+  transform: translateX(-50%);
+}

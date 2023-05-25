@@ -1,0 +1,41 @@
+.container {
+  cursor: pointer;
+  padding: 0.5rem 24px;
+  background: var(--surface-bright-color);
+  border-radius: 2rem;
+  min-height: 58px;
+  min-width: 327px;
+  max-width: 327px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  &:hover {
+    filter: brightness(85%);
+  }
+  &:active {
+    filter: brightness(85%);
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.8;
+  color: var(--on-surface-bright-color);
+  padding: 0;
+  margin: 0;
+}
+
+.substring {
+  font-size: 0.75rem;
+}
+
+.icon {
+  height: 28px;
+  width: 28px;
+  color: var(--on-surface-bright-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

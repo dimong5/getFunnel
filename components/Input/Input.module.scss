@@ -1,0 +1,41 @@
+/* Chrome, Safari */
+
+.container {
+  position: relative;
+  input {
+    font-size: 1rem;
+    height: 59px;
+    width: 21rem;
+    background: var(--surface-color);
+    border-radius: 0.5rem;
+    border: none; /* Removes border */
+    outline: none; /* Removes focus outline */
+    -webkit-appearance: none; /* Removes appearance for webkit browsers */
+    -moz-appearance: none; /* Removes appearance for Mozilla browsers */
+    appearance: none; /* Removes appearance for other browsers */
+    color: rgba(
+      var(--on-surface-color),
+      0.8
+    ); /* Text color with alpha channel */
+    padding-left: 60px; /* Horizontal padding for cursor */
+    padding-right: 22px;
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+    ::placeholder {
+      color: rgba(
+        var(--on-surface-color),
+        0.4
+      ); /* Placeholder color with alpha channel */
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}

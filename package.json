@@ -6,17 +6,37 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate": "plop --plopfile ./.plop/plopfile.js"
   },
   "dependencies": {
-    "@types/node": "18.16.3",
-    "@types/react": "18.2.0",
-    "@types/react-dom": "18.2.1",
+    "@apollo/client": "^3.7.14",
+    "@next/bundle-analyzer": "^13.3.4",
+    "@reach/portal": "^0.18.0",
+    "@react-hook/media-query": "^1.1.1",
+    "@react-spring/web": "^9.7.2",
+    "@types/node": "^18.16.3",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "@use-gesture/vanilla": "^10.2.26",
+    "classnames": "^2.3.2",
     "eslint": "8.39.0",
-    "eslint-config-next": "13.3.4",
-    "next": "13.3.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "5.0.4"
+    "eslint-config-next": "^13.3.4",
+    "hls.js": "^1.4.0",
+    "next": "^13.3.4",
+    "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^18.2.0",
+    "react-hook": "jaredLunde/react-hook",
+    "react-spring-bottom-sheet": "^3.4.1",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@size-limit/preset-app": "^8.2.4",
+    "@svgr/webpack": "^8.0.1",
+    "babel-plugin-inline-react-svg": "^2.0.2",
+    "plop": "^3.1.2",
+    "size-limit": "^8.2.4"
   }
 }

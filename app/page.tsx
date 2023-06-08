@@ -1,25 +1,31 @@
 import { Player } from '@/components/Player'
 import styles from './page.module.scss'
 import { ChangeTheme } from '@/components/ChangeTheme'
-import { useQuery } from '@apollo/client';
+import { ViewFunnelObjectType, resolve } from "@/gqty";
 
-export default function Home() {
-  const funnelId = '60f3b0b9c9b7a1001b9f9b8a';
+const recreateObject = function <T>(obj: T): T {
+  if (obj === null) return obj;
+  if (typeof obj !== "object") return obj;
+  if (Array.isArray(obj)) return obj.map(recreateObject) as T;
+  return Object.fromEntries(
+    Object.entries(obj).map(([key, value]) => [key, recreateObject(value)])
+  ) as any;
+};
 
-  // const { loading, data } = useQuery(VIEW_FUNNEL, {
-  //   variables: {
-  //     data: {
-  //       code: slug ?? '',
-  //     },
-  //   },
-  //   skip: !slug, // skip the query if slug is not defined
-  //   onCompleted: (_data) => {
-  //     setTenantId(_data?.viewFunnel.tenantId);
-  //   },
-  // });
+const prepare = ({ ...others }: ViewFunnelObjectType) => {
+  return {
+    ...recreateObject(others),
+  };
+};
+
+
+export default async function Home() {
+  const funnel = await resolve(({ query: { viewFunnel } }) =>
+    prepare(viewFunnel({ data: { code: "untitled-ptzkmh" } }))
+  );
   return (
     <div className={styles.main}>
-      <Player />
+      <Player funnel={funnel} />
       <ChangeTheme />
     </div>
   )

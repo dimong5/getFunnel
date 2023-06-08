@@ -12,6 +12,7 @@ module.exports = withBundleAnalyzer({
     return config;
   },
   experimental: {
+    serverActions: true,
     appDir: true,
   },
 });
